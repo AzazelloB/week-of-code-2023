@@ -1,1 +1,3 @@
-# week-of-code-2023
+# Week of the Code 2023
+
+1. Fibonacci with no recursion
