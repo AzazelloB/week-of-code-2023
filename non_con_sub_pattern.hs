@@ -10,10 +10,12 @@ subpattern :: String -> String -> [String]
 subpattern s1 s2
   | length s1 <= 3 = []
   | length s2 <= 3 = []
-  | otherwise = filter (`isSubsequenceOf` is1) $ subsequences is2
+  | otherwise = filter ((>= maxL) . length) allSubs
     where
       is1 = map toLower $ shortest s1 s2
       is2 = map toLower $ longest s1 s2
+      allSubs = filter (`isSubsequenceOf` is1) $ subsequences is2
+      maxL = maximum $ map length allSubs
 
 main :: IO ()
 main = do
