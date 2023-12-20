@@ -2,3 +2,4 @@
 
 - [x] Fibonacci with no recursion
 - [x] All subpatterns even if not consecutive
+- [x] Minimum amount of coins to pay
