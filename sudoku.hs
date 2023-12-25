@@ -38,7 +38,7 @@ resolveSudoku grid = fromMaybe grid $ go grid
       Just pos -> listToMaybe $ mapMaybe (\num -> if isValid g num pos then go (placeNum g num pos) else Nothing) [1..9]
 
 placeNum :: Grid -> Int -> (Int, Int) -> Grid
-placeNum grid num (row, col) = zipWith (\ r rowVals
+placeNum grid num (row, col) = zipWith (\r rowVals
   -> (if r == row then replace col num rowVals else rowVals)) [0..] grid
 
 replace :: Int -> a -> [a] -> [a]
