@@ -4,3 +4,4 @@
 - [x] All subpatterns even if not consecutive
 - [x] Minimum amount of coins to pay
 - [x] Find shortest route
+- [x] Sudoku solver
